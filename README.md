@@ -4,6 +4,7 @@ Supplementaries for 'Deep-locally-non-linear-embedding - Automatic path-like col
 Directory contains:
 
 DeepLNE class with example usage
+
 Tutorial to train DeepLNE and use it as a biased CV 
 
 All figures of main text and SI
