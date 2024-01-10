@@ -5,7 +5,7 @@ Directory contains:
 
 DeepLNE class with example usage
 
-Tutorial to train DeepLNE and use it as a biased CV 
+Tutorial for training DeepLNE and use it as a biased CV (Particle in Muller-Brown potential)
 
 All figures of main text and SI
 All analysis scripts needed to reproduce results published in this study
