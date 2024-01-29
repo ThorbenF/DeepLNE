@@ -1,5 +1,5 @@
 # DeepLNE
-Repository for 'Deep learning optimal path-like collective variable for enhanced sampling molecular dynamics'
+Repository for 'Deep learning path-like collective variable for enhanced sampling molecular dynamics'
 
 Content:
 
