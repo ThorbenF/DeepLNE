@@ -1,0 +1,50 @@
+; RUN PARAMETERS
+integrator               = md
+dt                       = 0.002
+nsteps                   = 500000000               ;number of steps 1000000ps 1ms
+nstxout                  = 500000000                     ; high precision every 10ps
+nstvout                  =     
+nstlog                   = 500000000
+nstenergy                = 500000000
+nstxtcout                = 500000000
+xtc_grps                 = System     ;group(s) to write to xtc trajectory
+energygrps               = System       ;group(s) to write to energy file 
+                                                
+;NEIGHBORING SEARCHING PARAMETERS
+nstlist                  = 10                   ;Frequency to update the neighbor list (and the long-range forces, 
+ns_type                  = Grid                 ;Make a grid in the box and only check atoms in neighboring grid cells 
+                                                ;when constructing a new neighbor list every nstlist steps                                      
+pbc                      = xyz                  ; Periodic boudary conditions in all the directions 
+rlist                    = 1.0
+
+;OPTIONS FOR ELECTROSTATICS AND VDW
+cutoff-scheme            = Verlet
+coulombtype              = PME 
+pme_order                = 4                     ;cubic interpolation
+fourierspacing           = 0.12 
+rcoulomb                 = 1.0
+vdw-type                 = Cut-off
+rvdw                     = 1.0
+
+
+;TEMPERATURE COUPLING
+tcoupl                   = v-rescale            ;Temperature coupling
+tc-grps                  = System
+tau_t                    = 0.1
+ref_t                    = 300
+
+;DISPERSION CORRECTION
+DispCorr                 = EnerPres             ; account for vdw cut-off
+
+;PRESSURE COUPLING
+Pcoupl                   = no                   ;NVT simulation
+
+continuation             = yes
+gen_vel                  = no                   ;Velocity generation
+gen_temp                 = 300
+gen_seed                 = -1
+
+;OPTIONS FOR BONDS
+lincs_iter               = 1
+lincs_order              = 4
+constraints              = h-bonds
